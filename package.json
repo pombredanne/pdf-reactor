@@ -1,5 +1,5 @@
 {
-  "name": "pdf-creator",
+  "name": "express-pdf-generation",
   "version": "0.0.1",
   "description": "Boilerplate node application.",
   "main": "./lib",
