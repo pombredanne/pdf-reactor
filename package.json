@@ -6,7 +6,6 @@
   "dependencies": {
     "bunyan": "~0.22.0",
     "config": "~0.4.32",
-    "phantom": "^0.6.5",
     "express": "^4.7.2",
     "wkhtmltopdf": "^0.1.5",
     "aws-sdk": "^2.0.17",
