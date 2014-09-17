@@ -34,7 +34,27 @@ Here is a sample :
 }
 ```
 
+## Npm commands
+
+The package.json have several commands setup
+
+- To start the service just do: `NODE_ENV=<YOUR_ENV> npm start`
+- If you have nodemon installed, you can run: `NODE_ENV=<YOUR_ENV> npm run nodemon`
+- To test synthax and mocha tests (not any for now), run: `npm test`
+- To check only the synthax, just run: `npm run lint`
+- To run only the tests (not any for now), you can run: `npm run mocha`
+
+Some more command are ready for Travis and Coverall, check the package.json
+
 ## Routes
+
+**GET** /
+
+Will return the name and the version of the service.
+
+**GET** /healthcheck
+
+This url is primarly there for Elastic Load-Balancer AWS.
 
 
 **GET** /pdf?url=`http://www.google.com`
