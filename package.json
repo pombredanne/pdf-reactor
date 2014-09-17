@@ -1,7 +1,7 @@
 {
-  "name": "express-pdf-generation",
+  "name": "pdf-reactor",
   "version": "0.0.1",
-  "description": "Boilerplate node application.",
+  "description": "Express server service to generate PDFs.",
   "main": "./lib",
   "dependencies": {
     "bunyan": "~0.22.0",
@@ -25,8 +25,8 @@
     "nodemon": "nodemon --debug . | ./node_modules/.bin/bunyan",
     "test": "npm run lint && npm run mocha",
     "mocha": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec test/",
-    "coverage": "NODE_ENV=test ./node_modules/.bin/mocha -r blanket  -R html-cov test/ > coverage.html",
-    "coveralls": "NODE_ENV=test ./node_modules/.bin/mocha -r blanket  -R mocha-lcov-reporter test/ | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "NODE_ENV=test ./node_modules/.bin/mocha -r blanket -R html-cov test/ > coverage.html",
+    "coveralls": "NODE_ENV=test ./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter test/ | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "./node_modules/.bin/jshint --reporter ./node_modules/jshint-stylish/stylish.js ."
   },
   "repository": {
