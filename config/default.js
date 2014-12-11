@@ -4,7 +4,7 @@ var env = process.env;
 
 module.exports = {
   loglevel: env.LOGLEVEL || 'info',
-  port: env.port || 80,
+  port: env.APP_PORT || env.PORT || 80,
   aws: {
     accessKeyId: env.AWS_ACCESS_KEY_ID,
     secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
