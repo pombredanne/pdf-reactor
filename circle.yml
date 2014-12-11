@@ -1,0 +1,17 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker info
+    - docker build -t woorank/pdf-reactor:$CIRCLE_BUILD_NUM .
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - echo "{\"https://index.docker.io/v1/\":{\"auth\":\"<AUTH>\",\"email\":\"<EMAIL>\"}}" | sed "s/<EMAIL>/$HUB_EMAIL/;s/<AUTH>/$HUB_AUTH/" > ~/.dockercfg
+      - docker push woorank/pdf-reactor:$CIRCLE_BUILD_NUM
+      - docker tag woorank/pdf-reactor:$CIRCLE_BUILD_NUM woorank/pdf-reactor:latest
+      - docker push woorank/pdf-reactor:latest
